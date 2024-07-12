@@ -17,7 +17,7 @@ const baseConfig = {
     sourcemap: true,
     outdir: 'dist',
     target: "es2019",
-    watch, // 17부터는 if(watch) 로 사용
+    watch, // 17부터는 if(watch) 로 사용함
     external,
 }
 
