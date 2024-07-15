@@ -1,5 +1,5 @@
 {
-  "name": "@module_project/themes",
+  "name": "@module_project/react-components-layout",
   "version": "0.0.1",
   "type": "module",
   "main": "dist/index.js",
@@ -8,18 +8,20 @@
       "type": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.js"
-    },
-    "./themes.css": "./dist/themes.css"
+    }
   },
   "scripts": {
     "build": "yarn clean && yarn build:js && yarn build:type && yarn build:css",
     "build:js": "node build.js",
     "build:type": "yarn tsc --emitDeclarationOnly",
-    "build:css": "node ./scripts/build-css-module.js",
     "clean": "rm -rf dist"
   },
   "devDependencies": {
     "@module_project/esbuild-config": "workspace:^",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "typescript": "^5.5.3"
   }
 }

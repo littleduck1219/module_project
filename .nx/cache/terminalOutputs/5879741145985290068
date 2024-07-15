@@ -1,0 +1,12 @@
+(node:40428) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+/Users/gyeongdeokpark/Documents/01.github/web_module_project/packages/esbuild-config/index.js:30
+        esbuild.build({
+        ^
+
+ReferenceError: esbuild is not defined
+    at run (/Users/gyeongdeokpark/Documents/01.github/web_module_project/packages/esbuild-config/index.js:30:9)
+    at [90mfile:///Users/gyeongdeokpark/Documents/01.github/web_module_project/packages/themes/[39mbuild.js:4:1
+[90m    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)[39m
+
+Node.js v18.18.0
