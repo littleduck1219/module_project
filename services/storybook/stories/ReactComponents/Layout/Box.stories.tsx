@@ -8,4 +8,9 @@ export default {
   tags: ["autodocs"],
 };
 
-export const BlockStory = {};
+export const BoxStory = {
+  args: {
+    as: "button",
+    padding: "5",
+  },
+};
