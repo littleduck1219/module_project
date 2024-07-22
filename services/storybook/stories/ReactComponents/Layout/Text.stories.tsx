@@ -1,14 +1,14 @@
 import "@module_project/react-components-layout/style.css";
-import { Box as _Box } from "@module_project/react-components-layout";
+import { Text as _Text } from "@module_project/react-components-layout";
 
 export default {
-  title: "React Components/Layout/Box",
-  component: _Box,
+  title: "React Components/Layout/Text",
+  component: _Text,
   parameters: { layout: "centered" },
   tags: ["autodocs"],
 };
 
-export const BoxStory = {
+export const TextStory = {
   args: {
     as: "button",
     padding: "5",

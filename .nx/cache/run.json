@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx storybook @module_project/storybook",
-    "startTime": "2024-07-17T19:00:00.624Z",
-    "endTime": "2024-07-17T19:00:03.332Z",
+    "command": "nx run-many --target=dev --projects=@module_project/react-hooks-*,@module_project/react-components-*",
+    "startTime": "2024-07-21T08:53:25.895Z",
+    "endTime": "2024-07-21T08:53:27.545Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "@module_project/storybook:storybook",
-      "target": "storybook",
-      "projectName": "@module_project/storybook",
-      "hash": "16278120457112418396",
-      "startTime": "2024-07-17T19:00:00.631Z",
-      "endTime": "2024-07-17T19:00:03.332Z",
+      "taskId": "@module_project/react-components-layout:dev",
+      "target": "dev",
+      "projectName": "@module_project/react-components-layout",
+      "hash": "2774060588389208056",
+      "startTime": "2024-07-21T08:53:25.906Z",
+      "endTime": "2024-07-21T08:53:27.544Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1

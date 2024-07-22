@@ -1,12 +1,12 @@
 import * as React from "react";
-import { BoxProps } from "./types";
+import { TextProps } from "./types";
 import { clsx } from "clsx";
+import { vars } from "@module_project/themes";
 import { StyleSprinkles } from "../core/style.css";
 import { extractSprinkleProps } from "../utils/properties";
-import { vars } from "@module_project/themes";
 
-const Box = (props: BoxProps, ref: React.Ref<HTMLElement>) => {
-  const { as = "div", color, background, children } = props;
+const Text = (props: TextProps, ref: React.Ref<HTMLElement>) => {
+  const { as = "p", color, background, children } = props;
 
   return React.createElement(
     as,
@@ -29,5 +29,5 @@ const Box = (props: BoxProps, ref: React.Ref<HTMLElement>) => {
   );
 };
 
-const _Box = React.forwardRef(Box);
-export { _Box as Box };
+const _Text = React.forwardRef(Text);
+export { _Text as Text };
