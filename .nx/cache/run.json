@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx build @atto_ui/themes",
+    "startTime": "2024-09-30T08:50:54.686Z",
+    "endTime": "2024-09-30T08:50:57.950Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "@atto_ui/themes:build",
+      "target": "build",
+      "projectName": "@atto_ui/themes",
+      "hash": "2889769297493480800",
+      "startTime": "2024-09-30T08:50:54.693Z",
+      "endTime": "2024-09-30T08:50:57.949Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.8.2",
+  "deps": {
+    "nx": "^19.8.2",
+    "typescript": "^5.6.2"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "pluginsConfig": {
+    "@nx/js": {
+      "analyzeSourceFiles": false
+    }
+  },
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".gitignore",
+        "hash": "16750623677471445497"
+      },
+      {
+        "file": "package.json",
+        "hash": "11005654954567277330"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "17252751929654114228"
+      },
+      {
+        "file": "nx.json",
+        "hash": "2840276564117531126"
+      },
+      {
+        "file": "README.md",
+        "hash": "14966404512211749013"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "1134120301838637103"
+      }
+    ],
+    "projectFileMap": {
+      "@atto_ui/themes": [
+        {
+          "file": "packages/themes/build.js",
+          "hash": "8652198267163998721"
+        },
+        {
+          "file": "packages/themes/package.json",
+          "hash": "5217347839196398734"
+        },
+        {
+          "file": "packages/themes/scripts/build-css-module.js",
+          "hash": "8451463085882544004"
+        },
+        {
+          "file": "packages/themes/src/index.ts",
+          "hash": "8637691069094319803"
+        },
+        {
+          "file": "packages/themes/src/typography/index.ts",
+          "hash": "14874153686921477232"
+        },
+        {
+          "file": "packages/themes/src/typography/typography.ts",
+          "hash": "4799058404551180805"
+        },
+        {
+          "file": "packages/themes/src/variables/box.ts",
+          "hash": "7292877734584124380"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/index.ts",
+          "hash": "16067044052561609752"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/scale.ts",
+          "hash": "7489873214287167939"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/static/dark.ts",
+          "hash": "5275160406468445669"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/static/index.ts",
+          "hash": "17639848047638776056"
+        },
+        {
+          "file": "packages/themes/src/variables/colors/static/light.ts",
+          "hash": "7931262412381619475"
+        },
+        {
+          "file": "packages/themes/src/variables/index.ts",
+          "hash": "17288868138055620940"
+        },
+        {
+          "file": "packages/themes/src/variables/typography.ts",
+          "hash": "15425039881087709076"
+        },
+        {
+          "file": "packages/themes/tsconfig.json",
+          "hash": "8519493990262767824"
+        }
+      ]
+    }
+  }
+}

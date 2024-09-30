@@ -1,0 +1,109 @@
+{
+  "nodes": {
+    "@atto_ui/themes": {
+      "name": "@atto_ui/themes",
+      "type": "lib",
+      "data": {
+        "root": "packages/themes",
+        "sourceRoot": "packages/themes",
+        "name": "@atto_ui/themes",
+        "projectType": "library",
+        "tags": [
+          "npm:public"
+        ],
+        "metadata": {
+          "targetGroups": {
+            "NPM Scripts": [
+              "build",
+              "build:js",
+              "build:type",
+              "build:css",
+              "clean"
+            ]
+          },
+          "description": ""
+        },
+        "targets": {
+          "build": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build"
+            },
+            "metadata": {
+              "scriptContent": "npm run build:js && npm run build:type && npm run build:css",
+              "runCommand": "npm run build"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "^build"
+            ]
+          },
+          "build:js": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build:js"
+            },
+            "metadata": {
+              "scriptContent": "node build.js",
+              "runCommand": "npm run build:js"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "build:type": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build:type"
+            },
+            "metadata": {
+              "scriptContent": "tsc --emitDeclarationOnly",
+              "runCommand": "npm run build:type"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "build:css": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build:css"
+            },
+            "metadata": {
+              "scriptContent": "node ./scripts/build-css-module.js",
+              "runCommand": "npm run build:css"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "clean": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "clean"
+            },
+            "metadata": {
+              "scriptContent": "rm -rf dist",
+              "runCommand": "npm run clean"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "nx-release-publish": {
+            "executor": "@nx/js:release-publish",
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "options": {},
+            "configurations": {},
+            "parallelism": true
+          }
+        },
+        "implicitDependencies": []
+      }
+    }
+  },
+  "externalNodes": {},
+  "dependencies": {
+    "@atto_ui/themes": []
+  },
+  "version": "6.0"
+}

@@ -1,15 +1,16 @@
 {
-    "name": "@duck_ui/themes",
+    "name": "@atto_ui/themes",
     "version": "0.0.1",
     "description": "",
     "type": "module",
     "main": "dist/index.js",
-    "export": {
+    "exports": {
         ".": {
             "types": "./dist/index.d.ts",
             "import": "./dist/index.js",
             "require": "./dist/index.cjs"
-        }
+        },
+        "./themes.css": "./dist/themes.css"
     },
     "scripts": {
         "build": "npm run build:js && npm run build:type && npm run build:css",
