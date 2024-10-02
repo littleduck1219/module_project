@@ -1,12 +1,12 @@
 {
   "nodes": {
-    "@atto_ui/themes": {
-      "name": "@atto_ui/themes",
+    "@atto_ui/layout": {
+      "name": "@atto_ui/layout",
       "type": "lib",
       "data": {
-        "root": "packages/themes",
-        "sourceRoot": "packages/themes",
-        "name": "@atto_ui/themes",
+        "root": "packages/react/components/layout",
+        "sourceRoot": "packages/react/components/layout",
+        "name": "@atto_ui/layout",
         "projectType": "library",
         "tags": [
           "npm:public"
@@ -17,7 +17,6 @@
               "build",
               "build:js",
               "build:type",
-              "build:css",
               "clean"
             ]
           },
@@ -30,7 +29,7 @@
               "script": "build"
             },
             "metadata": {
-              "scriptContent": "npm run build:js && npm run build:type && npm run build:css",
+              "scriptContent": "npm run build:js && npm run build:type",
               "runCommand": "npm run build"
             },
             "configurations": {},
@@ -39,6 +38,211 @@
               "^build"
             ]
           },
+          "build:js": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build:js"
+            },
+            "metadata": {
+              "scriptContent": "node build.js",
+              "runCommand": "npm run build:js"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "build:type": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build:type"
+            },
+            "metadata": {
+              "scriptContent": "tsc --emitDeclarationOnly",
+              "runCommand": "npm run build:type"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "clean": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "clean"
+            },
+            "metadata": {
+              "scriptContent": "rm -rf dist",
+              "runCommand": "npm run clean"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "nx-release-publish": {
+            "executor": "@nx/js:release-publish",
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "options": {},
+            "configurations": {},
+            "parallelism": true
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
+    "@atto_ui/esbuild_config": {
+      "name": "@atto_ui/esbuild_config",
+      "type": "lib",
+      "data": {
+        "root": "packages/esbuild_config",
+        "sourceRoot": "packages/esbuild_config",
+        "name": "@atto_ui/esbuild_config",
+        "projectType": "library",
+        "tags": [
+          "npm:public"
+        ],
+        "metadata": {
+          "targetGroups": {
+            "NPM Scripts": [
+              "test"
+            ]
+          },
+          "description": ""
+        },
+        "targets": {
+          "test": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test"
+            },
+            "metadata": {
+              "scriptContent": "echo \"Error: no test specified\" && exit 1",
+              "runCommand": "npm run test"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "^build"
+            ]
+          },
+          "nx-release-publish": {
+            "executor": "@nx/js:release-publish",
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "options": {},
+            "configurations": {},
+            "parallelism": true
+          },
+          "build": {
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "npm run build",
+              "cwd": "packages/esbuild_config"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "^build"
+            ]
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
+    "@atto_ui/storybook": {
+      "name": "@atto_ui/storybook",
+      "type": "lib",
+      "data": {
+        "root": "services/storybook",
+        "sourceRoot": "services/storybook",
+        "name": "@atto_ui/storybook",
+        "tags": [
+          "npm:public"
+        ],
+        "metadata": {
+          "targetGroups": {
+            "NPM Scripts": [
+              "test",
+              "storybook",
+              "build-storybook"
+            ]
+          },
+          "description": ""
+        },
+        "targets": {
+          "test": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test"
+            },
+            "metadata": {
+              "scriptContent": "echo \"Error: no test specified\" && exit 1",
+              "runCommand": "npm run test"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "^build"
+            ]
+          },
+          "storybook": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "storybook"
+            },
+            "metadata": {
+              "scriptContent": "storybook dev -p 6006",
+              "runCommand": "npm run storybook"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "build-storybook": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build-storybook"
+            },
+            "metadata": {
+              "scriptContent": "storybook build",
+              "runCommand": "npm run build-storybook"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "nx-release-publish": {
+            "executor": "@nx/js:release-publish",
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "options": {},
+            "configurations": {},
+            "parallelism": true
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
+    "@atto_ui/themes": {
+      "name": "@atto_ui/themes",
+      "type": "lib",
+      "data": {
+        "root": "packages/themes",
+        "sourceRoot": "packages/themes/src",
+        "name": "@atto_ui/themes",
+        "projectType": "library",
+        "tags": [
+          "npm:public"
+        ],
+        "metadata": {
+          "targetGroups": {
+            "NPM Scripts": [
+              "build:js",
+              "build:type",
+              "build:css",
+              "clean"
+            ]
+          },
+          "description": ""
+        },
+        "targets": {
           "build:js": {
             "executor": "nx:run-script",
             "options": {
@@ -95,6 +299,99 @@
             "options": {},
             "configurations": {},
             "parallelism": true
+          },
+          "build": {
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "npm run build",
+              "cwd": "packages/themes"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "^build"
+            ]
+          }
+        },
+        "implicitDependencies": [
+          "@atto_ui/esbuild_config"
+        ]
+      }
+    },
+    "test": {
+      "name": "test",
+      "type": "lib",
+      "data": {
+        "root": "services/test",
+        "sourceRoot": "services/test",
+        "name": "test",
+        "tags": [
+          "npm:private"
+        ],
+        "metadata": {
+          "targetGroups": {
+            "NPM Scripts": [
+              "start",
+              "build",
+              "test",
+              "eject"
+            ]
+          }
+        },
+        "targets": {
+          "start": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "start"
+            },
+            "metadata": {
+              "scriptContent": "react-scripts start",
+              "runCommand": "npm run start"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "build": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build"
+            },
+            "metadata": {
+              "scriptContent": "react-scripts build",
+              "runCommand": "npm run build"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "^build"
+            ]
+          },
+          "test": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test"
+            },
+            "metadata": {
+              "scriptContent": "react-scripts test",
+              "runCommand": "npm run test"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "^build"
+            ]
+          },
+          "eject": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "eject"
+            },
+            "metadata": {
+              "scriptContent": "react-scripts eject",
+              "runCommand": "npm run eject"
+            },
+            "configurations": {},
+            "parallelism": true
           }
         },
         "implicitDependencies": []
@@ -103,7 +400,50 @@
   },
   "externalNodes": {},
   "dependencies": {
-    "@atto_ui/themes": []
+    "@atto_ui/layout": [
+      {
+        "source": "@atto_ui/layout",
+        "target": "@atto_ui/themes",
+        "type": "static"
+      },
+      {
+        "source": "@atto_ui/layout",
+        "target": "@atto_ui/esbuild_config",
+        "type": "static"
+      }
+    ],
+    "@atto_ui/esbuild_config": [],
+    "@atto_ui/storybook": [
+      {
+        "source": "@atto_ui/storybook",
+        "target": "@atto_ui/layout",
+        "type": "static"
+      },
+      {
+        "source": "@atto_ui/storybook",
+        "target": "@atto_ui/themes",
+        "type": "static"
+      }
+    ],
+    "@atto_ui/themes": [
+      {
+        "source": "@atto_ui/themes",
+        "target": "@atto_ui/esbuild_config",
+        "type": "implicit"
+      },
+      {
+        "source": "@atto_ui/themes",
+        "target": "@atto_ui/esbuild_config",
+        "type": "static"
+      }
+    ],
+    "test": [
+      {
+        "source": "test",
+        "target": "@atto_ui/themes",
+        "type": "static"
+      }
+    ]
   },
   "version": "6.0"
 }

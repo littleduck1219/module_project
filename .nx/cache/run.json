@@ -1,18 +1,40 @@
 {
   "run": {
-    "command": "nx build @atto_ui/themes",
-    "startTime": "2024-09-30T08:50:54.686Z",
-    "endTime": "2024-09-30T08:50:57.950Z",
+    "command": "nx build @atto_ui/layout",
+    "startTime": "2024-10-02T07:45:21.370Z",
+    "endTime": "2024-10-02T07:45:31.124Z",
     "inner": false
   },
   "tasks": [
     {
+      "taskId": "@atto_ui/esbuild_config:build",
+      "target": "build",
+      "projectName": "@atto_ui/esbuild_config",
+      "hash": "656906562361170619",
+      "startTime": "2024-10-02T07:45:21.379Z",
+      "endTime": "2024-10-02T07:45:21.905Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
       "taskId": "@atto_ui/themes:build",
       "target": "build",
       "projectName": "@atto_ui/themes",
-      "hash": "2889769297493480800",
-      "startTime": "2024-09-30T08:50:54.693Z",
-      "endTime": "2024-09-30T08:50:57.949Z",
+      "hash": "14313221093348664245",
+      "startTime": "2024-10-02T07:45:21.906Z",
+      "endTime": "2024-10-02T07:45:26.714Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "@atto_ui/layout:build",
+      "target": "build",
+      "projectName": "@atto_ui/layout",
+      "hash": "5304425128032079007",
+      "startTime": "2024-10-02T07:45:26.715Z",
+      "endTime": "2024-10-02T07:45:31.123Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0

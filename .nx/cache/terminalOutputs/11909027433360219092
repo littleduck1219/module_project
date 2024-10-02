@@ -1,0 +1,9 @@
+[2m> [22mnpm run build
+
+npm ERR! Lifecycle script `build` failed with error: 
+npm ERR! Error: Missing script: "build"
+
+To see a list of scripts, run:
+  npm run 
+npm ERR!   in workspace: @atto_ui/esbuild_config@1.0.0 
+npm ERR!   at location: /Users/gyeongdeok/Documents/01.git/module_project/packages/esbuild_config 
