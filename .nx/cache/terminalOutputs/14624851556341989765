@@ -1,0 +1,20 @@
+[2m> [22mnpm run build
+
+
+> @atto_ui/themes@0.0.1 build
+> npm run build:js && npm run build:type && npm run build:css
+
+
+> @atto_ui/themes@0.0.1 build:js
+> node build.js
+
+(node:46487) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+> @atto_ui/themes@0.0.1 build:type
+> tsc --emitDeclarationOnly
+
+
+> @atto_ui/themes@0.0.1 build:css
+> node ./scripts/build-css-module.js
+

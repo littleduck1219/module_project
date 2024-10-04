@@ -1,12 +1,19 @@
 {
   "version": "6.0",
-  "nxVersion": "19.8.2",
+  "nxVersion": "19.8.3",
   "deps": {
-    "nx": "^19.8.2",
-    "typescript": "^5.6.2",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "react-dom": "^18.3.1",
+    "@atto_ui/components_layout": "^1.0.0",
+    "@atto_ui/esbuild_config": "^1.0.0",
+    "@atto_ui/themes": "^0.0.1",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
+    "concurrently": "^9.0.1",
     "css-loader": "^7.1.2",
+    "esbuild": "^0.24.0",
+    "esbuild-sass-plugin": "^3.3.1",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-react-app": "^7.0.1",
@@ -18,8 +25,11 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-storybook": "^0.9.0",
+    "nx": "^19.8.2",
+    "sass": "^1.79.4",
     "sass-loader": "^16.0.2",
-    "style-loader": "^4.0.0"
+    "style-loader": "^4.0.0",
+    "typescript": "^5.6.2"
   },
   "pathMappings": {},
   "nxJsonPlugins": [],
@@ -31,36 +41,36 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "tsconfig.base.json",
-        "hash": "11362232352137141736"
-      },
-      {
-        "file": "README.md",
-        "hash": "14966404512211749013"
-      },
-      {
-        "file": ".vscode/settings.json",
-        "hash": "17252751929654114228"
-      },
-      {
         "file": ".gitignore",
         "hash": "16750623677471445497"
       },
       {
         "file": "package.json",
-        "hash": "6093253907742228625"
-      },
-      {
-        "file": ".eslintrc.json",
-        "hash": "6322645362367486923"
+        "hash": "1149463138059500127"
       },
       {
         "file": "nx.json",
         "hash": "9479377295568398225"
       },
       {
+        "file": ".eslintrc.json",
+        "hash": "6322645362367486923"
+      },
+      {
+        "file": "README.md",
+        "hash": "14966404512211749013"
+      },
+      {
         "file": ".prettierrc",
         "hash": "13959739671067066418"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "17252751929654114228"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "11362232352137141736"
       }
     ],
     "projectFileMap": {
@@ -133,6 +143,50 @@
           "hash": "8519493990262767824"
         }
       ],
+      "@atto_ui/esbuild_config": [
+        {
+          "file": "packages/esbuild_config/index.js",
+          "hash": "11642263973521280579"
+        },
+        {
+          "file": "packages/esbuild_config/package.json",
+          "hash": "15329299447984433927"
+        },
+        {
+          "file": "packages/esbuild_config/project.json",
+          "hash": "1412471908536783694"
+        }
+      ],
+      "@atto_ui/components_layout": [
+        {
+          "file": "packages/react/components/layout/package.json",
+          "hash": "15213318100690126137",
+          "deps": [
+            "@atto_ui/themes",
+            "@atto_ui/esbuild_config"
+          ]
+        },
+        {
+          "file": "packages/react/components/layout/src/Block.tsx",
+          "hash": "8302661085650478723"
+        },
+        {
+          "file": "packages/react/components/layout/src/block.scss",
+          "hash": "5537688736497318860"
+        },
+        {
+          "file": "packages/react/components/layout/src/build.js",
+          "hash": "531621838127922990"
+        },
+        {
+          "file": "packages/react/components/layout/src/index.ts",
+          "hash": "11898439104072743839"
+        },
+        {
+          "file": "packages/react/components/layout/tsconfig.json",
+          "hash": "10344179325425879767"
+        }
+      ],
       "@atto_ui/storybook": [
         {
           "file": "services/storybook/.storybook/main.js",
@@ -143,14 +197,10 @@
           "hash": "8584599935263350775"
         },
         {
-          "file": "services/storybook/components/layout/Block.stories.tsx",
-          "hash": "13985352930668053278"
-        },
-        {
           "file": "services/storybook/package.json",
-          "hash": "12784461577479427760",
+          "hash": "7881391241672313300",
           "deps": [
-            "@atto_ui/layout",
+            "@atto_ui/components_layout",
             "@atto_ui/themes"
           ]
         },
@@ -251,42 +301,16 @@
           "hash": "10652829298063498353"
         },
         {
+          "file": "services/storybook/stories/components/layout/Block.stories.tsx",
+          "hash": "16171600894595780267"
+        },
+        {
           "file": "services/storybook/stories/header.css",
           "hash": "14526687290905363219"
         },
         {
           "file": "services/storybook/stories/page.css",
           "hash": "2796504357991565494"
-        }
-      ],
-      "@atto_ui/layout": [
-        {
-          "file": "packages/react/components/layout/build.js",
-          "hash": "9047727345105433340"
-        },
-        {
-          "file": "packages/react/components/layout/package.json",
-          "hash": "4095815760156230318",
-          "deps": [
-            "@atto_ui/themes",
-            "@atto_ui/esbuild_config"
-          ]
-        },
-        {
-          "file": "packages/react/components/layout/src/Block.tsx",
-          "hash": "14720959146274216656"
-        },
-        {
-          "file": "packages/react/components/layout/src/block.scss",
-          "hash": "9391110383707928951"
-        },
-        {
-          "file": "packages/react/components/layout/src/index.ts",
-          "hash": "11898439104072743839"
-        },
-        {
-          "file": "packages/react/components/layout/tsconfig.json",
-          "hash": "10344179325425879767"
         }
       ],
       "test": [
@@ -300,9 +324,9 @@
         },
         {
           "file": "services/test/package.json",
-          "hash": "3698134303262925214",
+          "hash": "9389302345914585425",
           "deps": [
-            "@atto_ui/themes"
+            "@atto_ui/components_layout"
           ]
         },
         {
@@ -339,7 +363,7 @@
         },
         {
           "file": "services/test/src/App.tsx",
-          "hash": "9003861839237319306"
+          "hash": "17321885960349771493"
         },
         {
           "file": "services/test/src/index.css",
@@ -368,20 +392,6 @@
         {
           "file": "services/test/tsconfig.json",
           "hash": "3664978063588679595"
-        }
-      ],
-      "@atto_ui/esbuild_config": [
-        {
-          "file": "packages/esbuild_config/index.js",
-          "hash": "1112241324946311643"
-        },
-        {
-          "file": "packages/esbuild_config/package.json",
-          "hash": "13130006355972071365"
-        },
-        {
-          "file": "packages/esbuild_config/project.json",
-          "hash": "1412471908536783694"
         }
       ]
     }

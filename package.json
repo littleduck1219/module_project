@@ -9,15 +9,22 @@
   "description": "",
   "scripts": {
     "build": "nx build",
-    "graph": " nx run-many --target=build --graph"
+    "graph": "nx run-many --target=build --graph",
+    "dev:all": "concurrently \"npm run dev:storybook\" \"npm run dev:packages\"",
+    "dev:storybook": "nx storybook @atto_ui/storybook",
+    "dev:packages": "nx run-many --target=dev --projects='@atto_ui/components_layout'"
+
   },
-  "dependencies": {},
   "devDependencies": {
-    "nx": "^19.8.2",
-    "typescript": "^5.6.2",
+    "@atto_ui/components_layout": "^1.0.0",
+    "@atto_ui/esbuild_config": "^1.0.0",
+    "@atto_ui/themes": "^0.0.1",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
+    "concurrently": "^9.0.1",
     "css-loader": "^7.1.2",
+    "esbuild": "^0.24.0",
+    "esbuild-sass-plugin": "^3.3.1",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-react-app": "^7.0.1",
@@ -29,7 +36,21 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-storybook": "^0.9.0",
+    "nx": "^19.8.2",
+    "sass": "^1.79.4",
     "sass-loader": "^16.0.2",
-    "style-loader": "^4.0.0"
+    "style-loader": "^4.0.0",
+    "typescript": "^5.6.2"
+  },
+  "peerDependencies": {
+    "@atto_ui/components_layout": "*",
+    "@atto_ui/esbuild_config": "*",
+    "@atto_ui/themes": "*",
+    "react": "^18.3.1"
+  },
+  "dependencies": {
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "react-dom": "^18.3.1"
   }
 }

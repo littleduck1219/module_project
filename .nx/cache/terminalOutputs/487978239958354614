@@ -1,0 +1,27 @@
+[2m> [22mnpm run build
+
+
+> @atto_ui/esbuild_config@1.0.0 build
+> node index.js
+
+(node:44663) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+/Users/gyeongdeok/Documents/01.git/module_project/packages/esbuild_config/index.js:1
+import { context } from 'esbuild';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+[90m    at internalCompileFunction (node:internal/vm:77:18)[39m
+[90m    at wrapSafe (node:internal/modules/cjs/loader:1288:20)[39m
+[90m    at Module._compile (node:internal/modules/cjs/loader:1340:27)[39m
+[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)[39m
+[90m    at Module.load (node:internal/modules/cjs/loader:1207:32)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1023:12)[39m
+[90m    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)[39m
+[90m    at node:internal/main/run_main_module:28:49[39m
+
+Node.js v20.11.1
+npm ERR! Lifecycle script `build` failed with error: 
+npm ERR! Error: command failed 
+npm ERR!   in workspace: @atto_ui/esbuild_config@1.0.0 
+npm ERR!   at location: /Users/gyeongdeok/Documents/01.git/module_project/packages/esbuild_config 

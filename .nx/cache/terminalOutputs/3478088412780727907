@@ -1,0 +1,14 @@
+
+> @atto_ui/layout@0.0.1 build
+> npm run build:js && npm run build:type
+
+
+> @atto_ui/layout@0.0.1 build:js
+> node build.js
+
+(node:91024) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+> @atto_ui/layout@0.0.1 build:type
+> tsc --emitDeclarationOnly
+

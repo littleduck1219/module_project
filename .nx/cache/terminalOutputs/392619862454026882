@@ -1,0 +1,25 @@
+
+> @atto_ui/components_layout@1.0.0 dev
+> npm run build:js -- --watch && npm run build:type -- --watch
+
+
+> @atto_ui/components_layout@1.0.0 build:js
+> node src/build.js --watch
+
+(node:61785) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Build failed: Error: Invalid option in watch() call: "onRebuild"
+    at checkForInvalidFlags (/Users/gyeongdeok/Documents/01.git/module_project/node_modules/[4mesbuild[24m/lib/main.js:253:13)
+    at /Users/gyeongdeok/Documents/01.git/module_project/node_modules/[4mesbuild[24m/lib/main.js:1008:11
+    at new Promise (<anonymous>)
+    at Object.watch (/Users/gyeongdeok/Documents/01.git/module_project/node_modules/[4mesbuild[24m/lib/main.js:1005:35)
+    at run (/Users/gyeongdeok/Documents/01.git/module_project/packages/esbuild_config/index.js:38:24)
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+npm ERR! Lifecycle script `build:js` failed with error: 
+npm ERR! Error: command failed 
+npm ERR!   in workspace: @atto_ui/components_layout@1.0.0 
+npm ERR!   at location: /Users/gyeongdeok/Documents/01.git/module_project/packages/react/components/layout 
+npm ERR! Lifecycle script `dev` failed with error: 
+npm ERR! Error: command failed 
+npm ERR!   in workspace: @atto_ui/components_layout@1.0.0 
+npm ERR!   at location: /Users/gyeongdeok/Documents/01.git/module_project/packages/react/components/layout 

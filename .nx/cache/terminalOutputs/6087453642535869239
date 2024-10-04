@@ -1,0 +1,22 @@
+
+> @atto_ui/components_layout@1.0.0 dev
+> npm run build:js -- --watch && npm run build:type -- --watch
+
+
+> @atto_ui/components_layout@1.0.0 build:js
+> node src/build.js --watch
+
+(node:62927) ExperimentalWarning: Importing JSON modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Starting watch mode...
+Build failed: TypeError: esmContext.on is not a function
+    at run (/Users/gyeongdeok/Documents/01.git/module_project/packages/esbuild_config/index.js:43:18)
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+npm ERR! Lifecycle script `build:js` failed with error: 
+npm ERR! Error: command failed 
+npm ERR!   in workspace: @atto_ui/components_layout@1.0.0 
+npm ERR!   at location: /Users/gyeongdeok/Documents/01.git/module_project/packages/react/components/layout 
+npm ERR! Lifecycle script `dev` failed with error: 
+npm ERR! Error: command failed 
+npm ERR!   in workspace: @atto_ui/components_layout@1.0.0 
+npm ERR!   at location: /Users/gyeongdeok/Documents/01.git/module_project/packages/react/components/layout 

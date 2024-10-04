@@ -1,5 +1,7 @@
 import React from 'react';
-import { Block as UIBlock } from '@atto_ui/layout';
+import '@atto_ui/themes/themes.css';
+import '@atto_ui/components_layout/style.css';
+import { Block as UIBlock } from '@atto_ui/components_layout';
 
 export default {
   title: 'React Components/Layout/Block',

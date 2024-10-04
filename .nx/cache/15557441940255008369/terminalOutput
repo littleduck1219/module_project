@@ -1,0 +1,6 @@
+[2m> [22mnpm run build
+
+
+> @atto_ui/esbuild_config@1.0.0 build
+> node index.js
+

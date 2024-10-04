@@ -1,0 +1,18 @@
+[2m> [22mnpm run build
+
+JSONParseError: Expected ',' or '}' after property value in JSON at position 1028 while parsing '{
+  "name": "@atto_ui/components_layout"'
+    at /Users/gyeongdeok/.nvm/versions/node/v20.11.1/lib/node_modules/npm/node_modules/read-package-json-fast/lib/index.js:7:61
+    at async mapWorkspaces (/Users/gyeongdeok/.nvm/versions/node/v20.11.1/lib/node_modules/npm/node_modules/@npmcli/map-workspaces/lib/index.js:109:15)
+    at async Config.loadLocalPrefix (/Users/gyeongdeok/.nvm/versions/node/v20.11.1/lib/node_modules/npm/node_modules/@npmcli/config/lib/index.js:707:28)
+    at async Config.loadProjectConfig (/Users/gyeongdeok/.nvm/versions/node/v20.11.1/lib/node_modules/npm/node_modules/@npmcli/config/lib/index.js:638:5)
+    at async Config.load (/Users/gyeongdeok/.nvm/versions/node/v20.11.1/lib/node_modules/npm/node_modules/@npmcli/config/lib/index.js:282:5)
+    at async #load (/Users/gyeongdeok/.nvm/versions/node/v20.11.1/lib/node_modules/npm/lib/npm.js:195:5)
+    at async module.exports (/Users/gyeongdeok/.nvm/versions/node/v20.11.1/lib/node_modules/npm/lib/cli-entry.js:40:5)
+Error: call config.load() before reading values
+    at Config.get (/Users/gyeongdeok/.nvm/versions/node/v20.11.1/lib/node_modules/npm/node_modules/@npmcli/config/lib/index.js:187:13)
+    at get global [as global] (/Users/gyeongdeok/.nvm/versions/node/v20.11.1/lib/node_modules/npm/lib/npm.js:326:24)
+    at get prefix [as prefix] (/Users/gyeongdeok/.nvm/versions/node/v20.11.1/lib/node_modules/npm/lib/npm.js:425:17)
+    at errorMessage (/Users/gyeongdeok/.nvm/versions/node/v20.11.1/lib/node_modules/npm/lib/utils/error-message.js:132:35)
+    at exitHandler (/Users/gyeongdeok/.nvm/versions/node/v20.11.1/lib/node_modules/npm/lib/utils/exit-handler.js:181:53)
+    at module.exports (/Users/gyeongdeok/.nvm/versions/node/v20.11.1/lib/node_modules/npm/lib/cli-entry.js:72:12)
