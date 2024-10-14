@@ -1,0 +1,32 @@
+{
+  "run": {
+    "command": "nx build test",
+    "startTime": "2024-10-14T00:50:12.389Z",
+    "endTime": "2024-10-14T00:50:30.542Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "@duck-ui/themes:build",
+      "target": "build",
+      "projectName": "@duck-ui/themes",
+      "hash": "13466791993966584095",
+      "startTime": "2024-10-14T00:50:12.402Z",
+      "endTime": "2024-10-14T00:50:19.959Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
+      "taskId": "test:build",
+      "target": "build",
+      "projectName": "test",
+      "hash": "3243864578458282053",
+      "startTime": "2024-10-14T00:50:19.961Z",
+      "endTime": "2024-10-14T00:50:30.542Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}
