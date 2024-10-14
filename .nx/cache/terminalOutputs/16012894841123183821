@@ -1,0 +1,20 @@
+/private/var/folders/d6/fjp4ytzd58zgbf9nxv9w3jcm0000gn/T/371165f68b2ad10938e49f60100a30f0.cjs:25277
+  return Object.defineProperties(new Error(message), {
+                                 ^
+
+Error: Your application tried to access @fastcampus/esbuild-config, but it isn't declared in your dependencies; this makes the require call ambiguous and unsound.
+
+Required package: @fastcampus/esbuild-config (via "@fastcampus/esbuild-config/package.json")
+Required by: /Users/gyeongdeokpark/Documents/01.github/module_project/packages/themes/build.js
+
+    at makeError (/private/var/folders/d6/fjp4ytzd58zgbf9nxv9w3jcm0000gn/T/371165f68b2ad10938e49f60100a30f0.cjs:25277:34)
+    at resolveToUnqualified (/private/var/folders/d6/fjp4ytzd58zgbf9nxv9w3jcm0000gn/T/371165f68b2ad10938e49f60100a30f0.cjs:26914:21)
+    at Object.resolveToUnqualified (/private/var/folders/d6/fjp4ytzd58zgbf9nxv9w3jcm0000gn/T/371165f68b2ad10938e49f60100a30f0.cjs:27104:26)
+    at resolve$1 (file:///private/var/folders/d6/fjp4ytzd58zgbf9nxv9w3jcm0000gn/T/2a89674f94f0d0c3b1350a4fec9240a1.mjs:2033:31)
+[90m    at nextResolve (node:internal/modules/esm/loader:163:28)[39m
+[90m    at ESMLoader.resolve (node:internal/modules/esm/loader:835:30)[39m
+[90m    at ESMLoader.getModuleJob (node:internal/modules/esm/loader:424:18)[39m
+[90m    at ModuleWrap.<anonymous> (node:internal/modules/esm/module_job:77:40)[39m
+[90m    at link (node:internal/modules/esm/module_job:76:36)[39m
+
+Node.js v18.18.0

@@ -1,32 +1,43 @@
 {
   "run": {
-    "command": "nx build test",
-    "startTime": "2024-10-14T00:50:12.389Z",
-    "endTime": "2024-10-14T00:50:30.542Z",
+    "command": "nx build @duck-ui/react-components-layout",
+    "startTime": "2024-10-14T13:32:42.488Z",
+    "endTime": "2024-10-14T13:32:54.252Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "@duck-ui/themes:build",
+      "taskId": "@duck-ui/esbuild-config:build",
       "target": "build",
-      "projectName": "@duck-ui/themes",
-      "hash": "13466791993966584095",
-      "startTime": "2024-10-14T00:50:12.402Z",
-      "endTime": "2024-10-14T00:50:19.959Z",
+      "projectName": "@duck-ui/esbuild-config",
+      "hash": "11860754991892634663",
+      "startTime": "2024-10-14T13:32:42.496Z",
+      "endTime": "2024-10-14T13:32:43.630Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0
     },
     {
-      "taskId": "test:build",
+      "taskId": "@duck-ui/themes:build",
       "target": "build",
-      "projectName": "test",
-      "hash": "3243864578458282053",
-      "startTime": "2024-10-14T00:50:19.961Z",
-      "endTime": "2024-10-14T00:50:30.542Z",
+      "projectName": "@duck-ui/themes",
+      "hash": "11323191358486789358",
+      "startTime": "2024-10-14T13:32:43.631Z",
+      "endTime": "2024-10-14T13:32:48.278Z",
       "params": "",
       "cacheStatus": "cache-miss",
-      "status": 1
+      "status": 0
+    },
+    {
+      "taskId": "@duck-ui/react-components-layout:build",
+      "target": "build",
+      "projectName": "@duck-ui/react-components-layout",
+      "hash": "12939157532070265768",
+      "startTime": "2024-10-14T13:32:48.279Z",
+      "endTime": "2024-10-14T13:32:54.251Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
     }
   ]
 }

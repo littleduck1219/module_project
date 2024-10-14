@@ -1,0 +1,15 @@
+{
+  "name": "@duck-ui/esbuild-config",
+  "packageManager": "yarn@4.5.0",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "build": "",
+    "test": ""
+  },
+  "dependencies": {
+    "esbuild": "0.16.17"
+  }
+}
