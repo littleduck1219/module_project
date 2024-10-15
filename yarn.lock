@@ -278,9 +278,9 @@ __metadata:
     "@vanilla-extract/css": "npm:^1.16.0"
     "@vanilla-extract/esbuild-plugin": "npm:^2.3.11"
     "@vanilla-extract/recipes": "npm:^0.5.0"
-    "@vanilla-extract/sprinkles": "npm:^1.6.1"
+    "@vanilla-extract/sprinkles": "npm:^1.6.3"
     autoprefixer: "npm:^10.4.15"
-    clsx: "npm:^2.0.0"
+    clsx: "npm:^2.1.1"
     postcss: "npm:^8.4.29"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
@@ -2345,7 +2345,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vanilla-extract/sprinkles@npm:^1.6.1":
+"@vanilla-extract/sprinkles@npm:^1.6.3":
   version: 1.6.3
   resolution: "@vanilla-extract/sprinkles@npm:1.6.3"
   peerDependencies:
@@ -3120,7 +3120,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:^2.0.0":
+"clsx@npm:^2.1.1":
   version: 2.1.1
   resolution: "clsx@npm:2.1.1"
   checksum: 10c0/c4c8eb865f8c82baab07e71bfa8897c73454881c4f99d6bc81585aecd7c441746c1399d08363dc096c550cceaf97bd4ce1e8854e1771e9998d9f94c4fe075839

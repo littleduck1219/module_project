@@ -177,7 +177,7 @@
           "targetGroups": {
             "NPM Scripts": [
               "storybook",
-              "build-storybook"
+              "build"
             ]
           }
         },
@@ -194,17 +194,20 @@
             "configurations": {},
             "parallelism": true
           },
-          "build-storybook": {
+          "build": {
             "executor": "nx:run-script",
             "options": {
-              "script": "build-storybook"
+              "script": "build"
             },
             "metadata": {
               "scriptContent": "storybook build",
-              "runCommand": "yarn build-storybook"
+              "runCommand": "yarn build"
             },
             "configurations": {},
-            "parallelism": true
+            "parallelism": true,
+            "dependsOn": [
+              "^build"
+            ]
           },
           "nx-release-publish": {
             "executor": "@nx/js:release-publish",
