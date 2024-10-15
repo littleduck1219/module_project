@@ -1,43 +1,21 @@
 {
   "run": {
-    "command": "nx build @duck-ui/react-components-layout",
-    "startTime": "2024-10-14T13:32:42.488Z",
-    "endTime": "2024-10-14T13:32:54.252Z",
+    "command": "nx storybook @duck-ui/storybook",
+    "startTime": "2024-10-15T00:17:10.538Z",
+    "endTime": "2024-10-15T00:17:14.622Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "@duck-ui/esbuild-config:build",
-      "target": "build",
-      "projectName": "@duck-ui/esbuild-config",
-      "hash": "11860754991892634663",
-      "startTime": "2024-10-14T13:32:42.496Z",
-      "endTime": "2024-10-14T13:32:43.630Z",
+      "taskId": "@duck-ui/storybook:storybook",
+      "target": "storybook",
+      "projectName": "@duck-ui/storybook",
+      "hash": "16038821069311045216",
+      "startTime": "2024-10-15T00:17:10.548Z",
+      "endTime": "2024-10-15T00:17:14.622Z",
       "params": "",
       "cacheStatus": "cache-miss",
-      "status": 0
-    },
-    {
-      "taskId": "@duck-ui/themes:build",
-      "target": "build",
-      "projectName": "@duck-ui/themes",
-      "hash": "11323191358486789358",
-      "startTime": "2024-10-14T13:32:43.631Z",
-      "endTime": "2024-10-14T13:32:48.278Z",
-      "params": "",
-      "cacheStatus": "cache-miss",
-      "status": 0
-    },
-    {
-      "taskId": "@duck-ui/react-components-layout:build",
-      "target": "build",
-      "projectName": "@duck-ui/react-components-layout",
-      "hash": "12939157532070265768",
-      "startTime": "2024-10-14T13:32:48.279Z",
-      "endTime": "2024-10-14T13:32:54.251Z",
-      "params": "",
-      "cacheStatus": "cache-miss",
-      "status": 0
+      "status": 1
     }
   ]
 }
