@@ -1,6 +1,6 @@
 import { Text as _Text } from "@duck-ui/react-components-layout";
 import "@duck-ui/react-components-layout/style.css";
-import { classes } from "@duck-ui/themes";
+import { classes, vars } from "@duck-ui/themes";
 
 export default {
   title: "React Components/Layout/Text",
@@ -10,8 +10,14 @@ export default {
   },
   tags: ["autodocs"],
   argTypes: {
-    options: Object.keys(classes.typography.text),
-    control: "select",
+    fontSize: {
+      options: Object.keys(classes.typography.text),
+      control: "select",
+    },
+    color: {
+      options: Object.keys(vars.colors.$scale),
+      control: "select",
+    },
   },
 };
 
@@ -20,5 +26,6 @@ export const TextStory = {
     as: "p",
     fontSize: "sm",
     children: "hell",
+    color: "gray",
   },
 };
