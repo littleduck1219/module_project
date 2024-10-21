@@ -6,7 +6,7 @@ import { extractSprinkleProps } from "../utils/properties";
 import { vars } from "@duck-ui/themes";
 
 const Box = (props: BoxProps, ref: React.Ref<HTMLElement>) => {
-  const { as = "div", children } = props;
+  const { as = "div", color, background, children } = props;
 
   return React.createElement(
     as,
@@ -21,7 +21,8 @@ const Box = (props: BoxProps, ref: React.Ref<HTMLElement>) => {
         props.className,
       ]),
       style: {
-        backgroundColor: "yellow",
+        color: color && vars.colors.$scale?.[color]?.[700],
+        background: background && vars.colors.$scale?.[background]?.[100],
         ...props.style,
       },
     },

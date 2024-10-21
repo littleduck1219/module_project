@@ -1,4 +1,4 @@
-import { vars } from "@fastcampus/themes";
+import { vars } from "@duck-ui/themes";
 import * as React from "react";
 import { forwardRef, Ref } from "react";
 import { textStyle } from "./style.css";
