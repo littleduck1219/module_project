@@ -11,7 +11,7 @@ export default {
   tags: ["autodocs"],
 };
 
-export const FlexStory = {
+export const GridStory = {
   args: {
     as: "div",
     padding: 5,
@@ -24,9 +24,9 @@ export const FlexStory = {
     },
   },
   render: (args) => (
-    <_Flex {...args}>
+    <_Grid {...args}>
       <div>테스트</div>
       <div>테스트</div>
-    </_Flex>
+    </_Grid>
   ),
 };
