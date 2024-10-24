@@ -1,6 +1,7 @@
 import { Button as _Button } from "@duck-ui/react-components-button";
 import "@duck-ui/react-components-button/style.css";
 import { vars } from "@duck-ui/themes";
+import * as React from "react";
 
 export default {
   title: "React Components/Button",
@@ -31,5 +32,7 @@ export const ButtonStory = {
     children: "Button",
     variant: "outline",
     isDisabled: false,
+    isLoading: false,
+    leftIcon: "🦋",
   },
 };
