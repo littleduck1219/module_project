@@ -30,7 +30,6 @@ export default function Button(
   } = props;
 
   const enabledColor = vars.colors.$scale[color][500];
-  const disabled = isDisabled || isLoading;
 
   const hoverColor =
     variant === "solid"
@@ -41,24 +40,12 @@ export default function Button(
       ? vars.colors.$scale[color][700]
       : vars.colors.$scale[color][100];
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
-    onKeyDown?.(event);
-
-    if (event.key === "Enter" || event.key === "13") {
-      event.preventDefault();
-      event.currentTarget.click();
-    }
-  };
-
   return (
     <button
       {...props}
       ref={ref}
-      onKeyDown={handleKeyDown}
       role="button"
       className={clsx([buttonStyle({ size, variant })])}
-      disabled={disabled}
-      data-loading={isLoading}
       style={{
         ...assignInlineVars({
           [enableColorVariant]: enabledColor,
