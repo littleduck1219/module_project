@@ -10,7 +10,7 @@
     "graph": "nx run-many --target=build --graph",
     "dev:all": "yarn dev:storybook & yarn dev:packages",
     "dev:storybook": "nx storybook @duck-ui/storybook",
-    "dev:packages": "nx run-many --target=dev --projects='@duck-ui/react-components-*'"
+    "dev:packages": "nx run-many --target=dev --projects='@duck-ui/react-components-*, @duck-ui/react-hooks-*'"
   },
   "packageManager": "yarn@4.5.0",
   "devDependencies": {

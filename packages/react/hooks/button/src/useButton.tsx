@@ -1,4 +1,4 @@
-import { OverloadedButtonFunction } from "./type";
+import { BaseButtonProps, OverloadedButtonFunction } from "./types";
 
 export const useButton: OverloadedButtonFunction = (props: any): any => {
   const {
@@ -19,6 +19,7 @@ export const useButton: OverloadedButtonFunction = (props: any): any => {
       if (disabled) return;
       if (event.defaultPrevented) return;
       if (elementType === "button") return;
+
       event.preventDefault();
       (event.currentTarget as HTMLElement).click();
 
@@ -29,6 +30,7 @@ export const useButton: OverloadedButtonFunction = (props: any): any => {
       if (disabled) return;
       if (event.defaultPrevented) return;
       if (elementType === "input" && type !== "button") return;
+
       event.preventDefault();
       (event.currentTarget as HTMLElement).click();
 
@@ -41,5 +43,55 @@ export const useButton: OverloadedButtonFunction = (props: any): any => {
     "data-loading": isLoading,
     tabIndex: disabled ? undefined : (tabIndex ?? 0),
     onKeyDown: handleKeyDown,
+  };
+
+  let additionalProps = {};
+
+  switch (elementType) {
+    case "button": {
+      additionalProps = {
+        type: type ?? "button",
+        disabled,
+      };
+      break;
+    }
+    case "a": {
+      const { href, target, rel } = props as BaseButtonProps<"a">;
+
+      additionalProps = {
+        role: "button",
+        href: disabled ? undefined : href,
+        target: disabled ? undefined : target,
+        rel: disabled ? undefined : rel,
+        "area-disabled": isDisabled,
+      };
+      break;
+    }
+    case "input": {
+      additionalProps = {
+        role: "button",
+        type: props.type,
+        disabled,
+        "area-disabled": undefined,
+      };
+      break;
+    }
+    default: {
+      additionalProps = {
+        role: "button",
+        type: type ?? "button",
+        "area-disabled": isDisabled,
+      };
+      break;
+    }
+  }
+
+  const buttonProps = {
+    ...baseProps,
+    ...additionalProps,
+  };
+
+  return {
+    buttonProps,
   };
 };

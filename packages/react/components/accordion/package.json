@@ -1,5 +1,5 @@
 {
-  "name": "@duck-ui/react-hooks-button",
+  "name": "@duck-ui/react-components-accordion",
   "version": "0.0.1",
   "type": "module",
   "main": "dist/index.js",
@@ -8,7 +8,8 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./style.css": "./dist/index.css"
   },
   "scripts": {
     "build": "yarn clean && yarn build:js && yarn build:type && yarn build:css",
@@ -19,18 +20,27 @@
   },
   "devDependencies": {
     "@duck-ui/esbuild-config": "workspace:^",
+    "@duck-ui/react-hooks-button": "workspace:^",
     "@duck-ui/react-hooks-toggle": "workspace:^",
+    "@duck-ui/themes": "workspace:^",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
+    "@vanilla-extract/css": "^1.16.0",
+    "@vanilla-extract/dynamic": "^2.1.2",
+    "@vanilla-extract/esbuild-plugin": "^2.3.11",
+    "@vanilla-extract/recipes": "^0.5.5",
+    "@vanilla-extract/sprinkles": "^1.6.3",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.29",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
+    "@duck-ui/themes": "workspace:^",
     "react": "*"
   },
   "dependencies": {
-    "@duck-ui/react-hooks-toggle": "workspace:^",
     "clsx": "^2.1.1"
   }
 }

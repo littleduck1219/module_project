@@ -20,6 +20,8 @@
   },
   "devDependencies": {
     "@duck-ui/esbuild-config": "workspace:^",
+    "@duck-ui/react-hooks-button": "workspace:^",
+    "@duck-ui/react-hooks-toggle": "workspace:^",
     "@duck-ui/themes": "workspace:^",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",

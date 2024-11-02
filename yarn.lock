@@ -267,11 +267,40 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@duck-ui/react-components-accordion@workspace:packages/react/components/accordion":
+  version: 0.0.0-use.local
+  resolution: "@duck-ui/react-components-accordion@workspace:packages/react/components/accordion"
+  dependencies:
+    "@duck-ui/esbuild-config": "workspace:^"
+    "@duck-ui/react-hooks-button": "workspace:^"
+    "@duck-ui/react-hooks-toggle": "workspace:^"
+    "@duck-ui/themes": "workspace:^"
+    "@types/react": "npm:^18.2.21"
+    "@types/react-dom": "npm:^18.2.7"
+    "@vanilla-extract/css": "npm:^1.16.0"
+    "@vanilla-extract/dynamic": "npm:^2.1.2"
+    "@vanilla-extract/esbuild-plugin": "npm:^2.3.11"
+    "@vanilla-extract/recipes": "npm:^0.5.5"
+    "@vanilla-extract/sprinkles": "npm:^1.6.3"
+    autoprefixer: "npm:^10.4.15"
+    clsx: "npm:^2.1.1"
+    postcss: "npm:^8.4.29"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    typescript: "npm:^5.2.2"
+  peerDependencies:
+    "@duck-ui/themes": "workspace:^"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@duck-ui/react-components-button@workspace:^, @duck-ui/react-components-button@workspace:packages/react/components/button":
   version: 0.0.0-use.local
   resolution: "@duck-ui/react-components-button@workspace:packages/react/components/button"
   dependencies:
     "@duck-ui/esbuild-config": "workspace:^"
+    "@duck-ui/react-hooks-button": "workspace:^"
+    "@duck-ui/react-hooks-toggle": "workspace:^"
     "@duck-ui/themes": "workspace:^"
     "@types/react": "npm:^18.2.21"
     "@types/react-dom": "npm:^18.2.7"
@@ -316,9 +345,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@duck-ui/react-hooks-button@workspace:packages/react/hooks/button":
+"@duck-ui/react-hooks-button@workspace:^, @duck-ui/react-hooks-button@workspace:packages/react/hooks/button":
   version: 0.0.0-use.local
   resolution: "@duck-ui/react-hooks-button@workspace:packages/react/hooks/button"
+  dependencies:
+    "@duck-ui/esbuild-config": "workspace:^"
+    "@duck-ui/react-hooks-toggle": "workspace:^"
+    "@types/react": "npm:^18.2.21"
+    "@types/react-dom": "npm:^18.2.7"
+    clsx: "npm:^2.1.1"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    typescript: "npm:^5.2.2"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@duck-ui/react-hooks-toggle@workspace:^, @duck-ui/react-hooks-toggle@workspace:packages/react/hooks/toggle":
+  version: 0.0.0-use.local
+  resolution: "@duck-ui/react-hooks-toggle@workspace:packages/react/hooks/toggle"
   dependencies:
     "@duck-ui/esbuild-config": "workspace:^"
     "@types/react": "npm:^18.2.21"
@@ -339,6 +385,8 @@ __metadata:
     "@chromatic-com/storybook": "npm:^1.9.0"
     "@duck-ui/react-components-button": "workspace:^"
     "@duck-ui/react-components-layout": "workspace:^"
+    "@duck-ui/react-hooks-button": "workspace:^"
+    "@duck-ui/react-hooks-toggle": "workspace:^"
     "@duck-ui/themes": "workspace:^"
     "@storybook/addon-docs": "npm:^8.3.5"
     "@storybook/addon-essentials": "npm:^8.3.5"

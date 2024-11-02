@@ -5,6 +5,8 @@
     "@chromatic-com/storybook": "^1.9.0",
     "@duck-ui/react-components-button": "workspace:^",
     "@duck-ui/react-components-layout": "workspace:^",
+    "@duck-ui/react-hooks-button": "workspace:^",
+    "@duck-ui/react-hooks-toggle": "workspace:^",
     "@duck-ui/themes": "workspace:^",
     "@storybook/addon-docs": "^8.3.5",
     "@storybook/addon-essentials": "^8.3.5",

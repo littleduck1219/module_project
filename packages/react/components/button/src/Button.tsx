@@ -11,11 +11,10 @@ import {
 import { clsx } from "clsx";
 import { vars } from "@duck-ui/themes";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
+import { useButton } from "@duck-ui/react-hooks-button";
 
-export default function Button(
-  props: ButtonProps,
-  ref: React.Ref<HTMLButtonElement>,
-) {
+const Button = (props: ButtonProps, ref: React.Ref<HTMLButtonElement>) => {
+  const { buttonProps } = useButton(props);
   const {
     variant = "solid",
     size = "md",
@@ -23,14 +22,11 @@ export default function Button(
     leftIcon,
     rightIcon,
     isLoading,
-    style,
-    isDisabled = false,
-    onKeyDown,
     children,
+    style,
   } = props;
 
-  const enabledColor = vars.colors.$scale[color][500];
-
+  const endableColor = vars.colors.$scale[color][500];
   const hoverColor =
     variant === "solid"
       ? vars.colors.$scale[color][600]
@@ -42,13 +38,18 @@ export default function Button(
 
   return (
     <button
-      {...props}
+      {...buttonProps}
+      // 기능 ^
       ref={ref}
-      role="button"
-      className={clsx([buttonStyle({ size, variant })])}
+      className={clsx([
+        buttonStyle({
+          size,
+          variant,
+        }),
+      ])}
       style={{
         ...assignInlineVars({
-          [enableColorVariant]: enabledColor,
+          [enableColorVariant]: endableColor,
           [hoverColorVariant]: hoverColor,
           [activeColorVariant]: activeColor,
         }),
@@ -61,7 +62,7 @@ export default function Button(
       {rightIcon && <span className={spanStyle({ size })}>{rightIcon}</span>}
     </button>
   );
-}
+};
 
 const _Button = React.forwardRef(Button);
 export { _Button as Button };

@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx storybook @duck-ui/storybook",
+    "startTime": "2024-11-02T05:05:13.879Z",
+    "endTime": "2024-11-02T05:06:06.917Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "@duck-ui/storybook:storybook",
+      "target": "storybook",
+      "projectName": "@duck-ui/storybook",
+      "hash": "5256995365703791832",
+      "startTime": "2024-11-02T05:05:13.887Z",
+      "endTime": "2024-11-02T05:06:06.917Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}
